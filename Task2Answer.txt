@@ -1,0 +1,37 @@
+Feasibility:
+
+It is possible to achieve such a solution. In the current scenario, the market is customer-driven. The content we consume through videos and images tells a lot about our likes and dislikes. The idea of automating the task video tagging can help understand the taste of the viewer/customer. 
+The advancement in machine learning algorithms in the field of computer vision, natural language processing has made the task of video tagging possible. The existing solutions use an encoder-decoder approach that is a combination of Convolutional Neural Network, Recurrent Neural Network and Long term Short term memory for automatic caption generation. 
+
+
+Methodology:
+
+Dataset:
+
+Datasets that can be used are : Youtube-8M, Flickr8k, Flickr30k and MS COCO
+
+Initial Steps:
+
+Firstly video farmers should be extracted at fixed time intervals. Secondly, we must ensure that there is no duplication or redundancy and lastly, as per the user inputs the videos are recommended. In order to remove redundancy, an image filtering pipeline would be used. This pipeline would consist of filters that can detect redundancy. To sort out unconnected image content, a shift learning approach and to remove duplicate images, hashing could be used.
+After this, the images can be fed to the model.
+
+Architecture:
+
+This method is called Show, Tell and Attend it is a neural image caption generation mechanism which uses visual attention. The architecture uses GooLeNet CNN for feature extraction and Long term Short Term memory units for caption generation. It identifies 196 “spots” on each video frame which in turn has its own feature vector of length 512. These spots are then used to generate captions. It involves the usage of two attention mechanisms: “soft” deterministic attention mechanism trained with back-propagation methods; and a “hard” stochastic attention mechanism trained by maximizing an approximate variational lower bound. The attention mechanism improves caption, but it also increases computational cost.
+
+
+Challenges:
+
+1.Might not be feasible for real-time application on the cell phone as the architecture due to     the use of attention mechanism increases the computational cost of the model. Also, the    architecture is time-intensive as it requires to preprocess and store encoded features.
+ 
+2.Multiple papers on the same topic suggest that there is no standardised split in the data.
+
+
+References:
+
+Camera2Caption: A real-time image caption generator. Available from: https://www.researchgate.net/publication/322879287_Camera2Caption_A_real-time_image_caption_generator.
+
+Show, Attend and Tell: Neural Image Caption Generation with Visual Attention. Available from:  https://arxiv.org/abs/1502.03044
+
+Innovations in Computational Intelligence and Computer Vision. Advances in Intelligent Systems and Computing, vol 1189. Springer, Singapore. Available from: https://doi.org/10.1007/978-981-15-6067-5_33
+
